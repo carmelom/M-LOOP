@@ -14,3 +14,6 @@ import os
 
 __version__= "2.1.1"
 __all__ = ['controllers','interfaces','launchers','learners','testing','utilities','visualizations','cmd']
+
+for module in __all__:
+    exec('from . import %s'%module)
